@@ -509,4 +509,4 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   qx.Interface.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Interface.js.map?dt=1593592722860
+//# sourceMappingURL=Interface.js.map?dt=1593594340580

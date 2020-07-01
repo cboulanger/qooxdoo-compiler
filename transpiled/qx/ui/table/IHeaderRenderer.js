@@ -71,4 +71,4 @@
   qx.ui.table.IHeaderRenderer.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=IHeaderRenderer.js.map?dt=1593592758039
+//# sourceMappingURL=IHeaderRenderer.js.map?dt=1593594373341
