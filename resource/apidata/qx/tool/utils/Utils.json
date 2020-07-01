@@ -13,7 +13,7 @@
         "column": 0
       },
       "end": {
-        "line": 427,
+        "line": 357,
         "column": 3
       }
     },
@@ -419,93 +419,16 @@
       },
       "type": "function",
       "access": "public"
-    },
-    "deleteRecursive": {
-      "location": {
-        "start": {
-          "line": 282,
-          "column": 4
-        },
-        "end": {
-          "line": 329,
-          "column": 5
-        }
-      },
-      "jsdoc": {
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Node-8 compatible function to delete a directory recursively</p>"
-          }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "{String} dirname The name of the directory to delete",
-            "paramName": "dirname",
-            "description": "The name of the directory to delete",
-            "type": "String"
-          }
-        ],
-        "@return": [
-          {
-            "name": "@return",
-            "body": "{Promise}",
-            "type": "Promise",
-            "description": ""
-          }
-        ]
-      },
-      "type": "function",
-      "access": "public"
-    },
-    "safeDelete": {
-      "location": {
-        "start": {
-          "line": 337,
-          "column": 4
-        },
-        "end": {
-          "line": 345,
-          "column": 5
-        }
-      },
-      "jsdoc": {
-        "@description": [
-          {
-            "name": "@description",
-            "body": "<p>Safely deletes a file asynchronously, without throwing\n if the file does not exist</p>"
-          }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "filename",
-            "paramName": "filename",
-            "type": ""
-          }
-        ],
-        "@return": [
-          {
-            "name": "@return",
-            "body": "{Promise<void>}",
-            "type": "Promise<void>",
-            "description": ""
-          }
-        ]
-      },
-      "type": "function",
-      "access": "public"
     }
   },
   "defer": {
     "location": {
       "start": {
-        "line": 348,
+        "line": 278,
         "column": 2
       },
       "end": {
-        "line": 426,
+        "line": 356,
         "column": 3
       }
     }
