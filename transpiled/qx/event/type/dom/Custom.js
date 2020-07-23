@@ -154,4 +154,4 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
   qx.event.type.dom.Custom.$$dbClassInfo = $$dbClassInfo;
 })();
 
-//# sourceMappingURL=Custom.js.map?dt=1593594367423
+//# sourceMappingURL=Custom.js.map?dt=1595486341647
