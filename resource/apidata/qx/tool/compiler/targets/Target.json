@@ -13,7 +13,7 @@
         "column": 0
       },
       "end": {
-        "line": 802,
+        "line": 859,
         "column": 3
       }
     },
@@ -110,6 +110,7 @@
       "propertyType": "new",
       "nullable": false,
       "init": "output",
+      "transform": "_transformOutputDir",
       "allowNull": false,
       "check": "String",
       "defaultValue": "output"
@@ -188,14 +189,39 @@
       "nullable": true,
       "allowNull": true
     },
-    "analyser": {
+    "preserveEnvironment": {
       "location": {
         "start": {
-          "line": 88,
+          "line": 89,
           "column": 4
         },
         "end": {
-          "line": 90,
+          "line": 93,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>List of environment keys to preserve in code, ie reserve for runtime detection\n and exclude from code elimination</p>"
+          }
+        ]
+      },
+      "name": "preserveEnvironment",
+      "propertyType": "new",
+      "nullable": true,
+      "allowNull": true,
+      "check": "Array"
+    },
+    "analyser": {
+      "location": {
+        "start": {
+          "line": 98,
+          "column": 4
+        },
+        "end": {
+          "line": 100,
           "column": 5
         }
       },
@@ -212,14 +238,39 @@
       "nullable": false,
       "allowNull": false
     },
-    "locales": {
+    "inlineExternalScripts": {
       "location": {
         "start": {
-          "line": 93,
+          "line": 105,
           "column": 4
         },
         "end": {
-          "line": 97,
+          "line": 108,
+          "column": 5
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Whether to inline external scripts</p>"
+          }
+        ]
+      },
+      "name": "inlineExternalScripts",
+      "propertyType": "new",
+      "init": false,
+      "check": "Boolean",
+      "defaultValue": false
+    },
+    "locales": {
+      "location": {
+        "start": {
+          "line": 111,
+          "column": 4
+        },
+        "end": {
+          "line": 115,
           "column": 5
         }
       },
@@ -237,6 +288,7 @@
       "init": [
         "en"
       ],
+      "transform": "_transformLocales",
       "allowNull": false,
       "defaultValue": [
         "en"
@@ -245,11 +297,11 @@
     "i18nAsParts": {
       "location": {
         "start": {
-          "line": 100,
+          "line": 118,
           "column": 4
         },
         "end": {
-          "line": 104,
+          "line": 122,
           "column": 5
         }
       },
@@ -272,11 +324,11 @@
     "writeAllTranslations": {
       "location": {
         "start": {
-          "line": 107,
+          "line": 125,
           "column": 4
         },
         "end": {
-          "line": 111,
+          "line": 129,
           "column": 5
         }
       },
@@ -299,11 +351,11 @@
     "updatePoFiles": {
       "location": {
         "start": {
-          "line": 114,
+          "line": 132,
           "column": 4
         },
         "end": {
-          "line": 118,
+          "line": 136,
           "column": 5
         }
       },
@@ -326,11 +378,11 @@
     "libraryPoPolicy": {
       "location": {
         "start": {
-          "line": 121,
+          "line": 139,
           "column": 4
         },
         "end": {
-          "line": 124,
+          "line": 142,
           "column": 5
         }
       },
@@ -355,11 +407,11 @@
     "writeCompileInfo": {
       "location": {
         "start": {
-          "line": 130,
+          "line": 148,
           "column": 4
         },
         "end": {
-          "line": 134,
+          "line": 152,
           "column": 5
         }
       },
@@ -382,11 +434,11 @@
     "writeLibraryInfo": {
       "location": {
         "start": {
-          "line": 139,
+          "line": 157,
           "column": 4
         },
         "end": {
-          "line": 143,
+          "line": 161,
           "column": 5
         }
       },
@@ -443,11 +495,11 @@
     "checkEnvironment": {
       "location": {
         "start": {
-          "line": 153,
+          "line": 172,
           "column": 4
         },
         "end": {
-          "line": 153,
+          "line": 172,
           "column": 44
         }
       },
@@ -455,25 +507,111 @@
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Fired after all enviroment data is collected\n  application {qx.tool.compiler.app.Application} the app\n  enviroment: {Object} enviroment data</p>"
+            "body": "<p>Fired after all enviroment data is collected, but before compilation begins; this\n is an  opportunity to adjust the environment for the target.  The event data contains:\n  application {qx.tool.compiler.app.Application} the app\n  enviroment: {Object} enviroment data</p>"
           }
         ]
       },
       "name": "checkEnvironment",
       "type": "qx.event.type.Data"
+    },
+    "writingApplication": {
+      "location": {
+        "start": {
+          "line": 179,
+          "column": 4
+        },
+        "end": {
+          "line": 179,
+          "column": 47
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Fired when an application is about to be serialized to disk; the appMeta is fully\n populated, and this is an opportunity to amend the meta data before it is serialized\n into files on disk</p>"
+          }
+        ]
+      },
+      "name": "writingApplication",
+      "type": "qx.event.type.Event"
+    },
+    "writtenApplication": {
+      "location": {
+        "start": {
+          "line": 184,
+          "column": 4
+        },
+        "end": {
+          "line": 184,
+          "column": 47
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "<p>Fired when an application has been serialized to disk</p>"
+          }
+        ]
+      },
+      "name": "writtenApplication",
+      "type": "qx.event.type.Event"
     }
   },
   "members": {
     "__pathMappings": {
       "location": {
         "start": {
-          "line": 158,
+          "line": 190,
           "column": 4
         },
         "end": {
-          "line": 158,
+          "line": 190,
           "column": 24
         }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{Map} maps filenames to uris"
+          }
+        ]
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "__appMeta": {
+      "location": {
+        "start": {
+          "line": 193,
+          "column": 4
+        },
+        "end": {
+          "line": 193,
+          "column": 19
+        }
+      },
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": ""
+          }
+        ],
+        "@type": [
+          {
+            "name": "@type",
+            "body": "{qx.tool.compiler.targets.meta.ApplicationMeta} for the current application"
+          }
+        ]
       },
       "type": "variable",
       "access": "private"
@@ -481,11 +619,11 @@
     "open": {
       "location": {
         "start": {
-          "line": 163,
+          "line": 198,
           "column": 4
         },
         "end": {
-          "line": 164,
+          "line": 199,
           "column": 5
         }
       },
@@ -503,11 +641,11 @@
     "_transformOutputDir": {
       "location": {
         "start": {
-          "line": 173,
+          "line": 208,
           "column": 4
         },
         "end": {
-          "line": 180,
+          "line": 215,
           "column": 5
         }
       },
@@ -547,11 +685,11 @@
     "getApplicationRoot": {
       "location": {
         "start": {
-          "line": 185,
+          "line": 220,
           "column": 4
         },
         "end": {
-          "line": 187,
+          "line": 222,
           "column": 5
         }
       },
@@ -569,11 +707,11 @@
     "getProjectDir": {
       "location": {
         "start": {
-          "line": 194,
+          "line": 229,
           "column": 4
         },
         "end": {
-          "line": 196,
+          "line": 231,
           "column": 5
         }
       },
@@ -597,11 +735,11 @@
     "_getOutputRootUri": {
       "location": {
         "start": {
-          "line": 201,
+          "line": 236,
           "column": 4
         },
         "end": {
-          "line": 205,
+          "line": 240,
           "column": 5
         }
       },
@@ -619,11 +757,11 @@
     "addPathMapping": {
       "location": {
         "start": {
-          "line": 214,
+          "line": 249,
           "column": 4
         },
         "end": {
-          "line": 220,
+          "line": 255,
           "column": 5
         }
       },
@@ -657,11 +795,11 @@
     "getPathMapping": {
       "location": {
         "start": {
-          "line": 229,
+          "line": 264,
           "column": 4
         },
         "end": {
-          "line": 244,
+          "line": 279,
           "column": 5
         }
       },
@@ -696,11 +834,11 @@
     "mapToUri": {
       "location": {
         "start": {
-          "line": 255,
+          "line": 290,
           "column": 4
         },
         "end": {
-          "line": 266,
+          "line": 301,
           "column": 5
         }
       },
@@ -743,11 +881,11 @@
     "_copyClassesToFile": {
       "location": {
         "start": {
-          "line": 268,
+          "line": 303,
           "column": 4
         },
         "end": {
-          "line": 276,
+          "line": 311,
           "column": 5
         }
       },
@@ -757,11 +895,11 @@
     "generateApplication": {
       "location": {
         "start": {
-          "line": 284,
+          "line": 319,
           "column": 4
         },
         "end": {
-          "line": 445,
+          "line": 500,
           "column": 5
         }
       },
@@ -775,11 +913,17 @@
         "@param": [
           {
             "name": "@param",
-            "body": "{Application} app"
+            "body": "application {Application} the application",
+            "paramName": "application",
+            "description": " the application",
+            "type": "Application"
           },
           {
             "name": "@param",
-            "body": "{Maker} maker"
+            "body": "environment {Object} the environment",
+            "paramName": "environment",
+            "description": " the environment",
+            "type": "Object"
           }
         ]
       },
@@ -789,11 +933,11 @@
     "_writeTranslations": {
       "location": {
         "start": {
-          "line": 452,
+          "line": 505,
           "column": 4
         },
         "end": {
-          "line": 469,
+          "line": 523,
           "column": 5
         }
       },
@@ -803,15 +947,6 @@
             "name": "@description",
             "body": "<p>Handles the output of translations and locales</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "appMeta {ApplicationMeta} compile data",
-            "paramName": "appMeta",
-            "description": " compile data",
-            "type": "ApplicationMeta"
-          }
         ]
       },
       "type": "function",
@@ -820,11 +955,11 @@
     "_transformLocales": {
       "location": {
         "start": {
-          "line": 478,
+          "line": 532,
           "column": 4
         },
         "end": {
-          "line": 490,
+          "line": 544,
           "column": 5
         }
       },
@@ -859,11 +994,11 @@
     "_writeLocales": {
       "location": {
         "start": {
-          "line": 502,
+          "line": 554,
           "column": 4
         },
         "end": {
-          "line": 541,
+          "line": 594,
           "column": 5
         }
       },
@@ -873,15 +1008,6 @@
             "name": "@description",
             "body": "<p>Writes the required locale CLDR data, incorporating inheritance.  Note that locales in CLDR can\n have a \"parent locale\", where the locale inherits all settings from the parent except where explicitly\n set in the locale.  This is in addition to the inheritance between language and locale, eg where \"en<em>GB\"\n overrides settings from \"en\".  Qooxdoo client understands that if a setting is not provided in\n \"en</em>GB\" it must look to \"en\", but it does not understand the \"parent locale\" inheritance, so this\n method must flatten the \"parent locale\" inheritance.</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "appMeta {ApplicationMeta} compile data",
-            "paramName": "appMeta",
-            "description": " compile data",
-            "type": "ApplicationMeta"
-          }
         ]
       },
       "type": "function",
@@ -890,11 +1016,11 @@
     "_writeAllTranslations": {
       "location": {
         "start": {
-          "line": 548,
+          "line": 599,
           "column": 4
         },
         "end": {
-          "line": 581,
+          "line": 633,
           "column": 5
         }
       },
@@ -904,15 +1030,6 @@
             "name": "@description",
             "body": "<p>Writes all translations</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "appMeta {ApplicationMeta} compile data",
-            "paramName": "appMeta",
-            "description": " compile data",
-            "type": "ApplicationMeta"
-          }
         ]
       },
       "type": "function",
@@ -921,11 +1038,11 @@
     "_writeRequiredTranslations": {
       "location": {
         "start": {
-          "line": 588,
+          "line": 638,
           "column": 4
         },
         "end": {
-          "line": 644,
+          "line": 695,
           "column": 5
         }
       },
@@ -935,15 +1052,6 @@
             "name": "@description",
             "body": "<p>Writes only those translations which are actually required</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "appMeta {ApplicationMeta} compile data",
-            "paramName": "appMeta",
-            "description": " compile data",
-            "type": "ApplicationMeta"
-          }
         ]
       },
       "type": "function",
@@ -952,11 +1060,11 @@
     "_writeApplication": {
       "location": {
         "start": {
-          "line": 654,
+          "line": 700,
           "column": 4
         },
         "end": {
-          "line": 701,
+          "line": 753,
           "column": 5
         }
       },
@@ -966,15 +1074,6 @@
             "name": "@description",
             "body": "<p>Writes the application</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "assets {Object[]} list of assets, where each asset is (see @link(qx.tool.compiler.resources.Manager) for details)\n  - libraryName {String}\n  - filename {String}\n  - fileInfo {String)",
-            "paramName": "assets",
-            "description": " list of assets, where each asset is (see @link(qx.tool.compiler.resources.Manager) for details)\n  - libraryName {String}\n  - filename {String}\n  - fileInfo {String)",
-            "type": "Object[]"
-          }
         ]
       },
       "type": "function",
@@ -983,11 +1082,11 @@
     "_writeIndexHtml": {
       "location": {
         "start": {
-          "line": 706,
+          "line": 758,
           "column": 4
         },
         "end": {
-          "line": 800,
+          "line": 853,
           "column": 5
         }
       },
@@ -1001,6 +1100,20 @@
       },
       "type": "function",
       "access": "protected"
+    },
+    "getAppMeta": {
+      "location": {
+        "start": {
+          "line": 855,
+          "column": 4
+        },
+        "end": {
+          "line": 857,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "public"
     },
     "bind": {
       "type": "function",
@@ -4628,6 +4741,72 @@
         ]
       }
     },
+    "getPreserveEnvironment": {
+      "type": "function",
+      "name": "getPreserveEnvironment",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>preserveEnvironment</code>.\n\nFor further details take a look at the property definition: {@link #preserveEnvironment}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Array",
+            "desc": "Returns the value for preserveEnvironment"
+          }
+        ]
+      }
+    },
+    "setPreserveEnvironment": {
+      "type": "function",
+      "name": "setPreserveEnvironment",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>preserveEnvironment</code>.\n\nFor further details take a look at the property definition: {@link #preserveEnvironment}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "Array",
+            "paramName": "value",
+            "desc": "Value for preserveEnvironment"
+          }
+        ]
+      }
+    },
+    "resetPreserveEnvironment": {
+      "type": "function",
+      "name": "resetPreserveEnvironment",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>preserveEnvironment</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #preserveEnvironment}."
+          }
+        ]
+      }
+    },
     "getAnalyser": {
       "type": "function",
       "name": "getAnalyser",
@@ -4690,6 +4869,96 @@
           {
             "name": "@description",
             "body": "Resets the user value of the property <code>analyser</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #analyser}."
+          }
+        ]
+      }
+    },
+    "getInlineExternalScripts": {
+      "type": "function",
+      "name": "getInlineExternalScripts",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "get",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>inlineExternalScripts</code>.\n\nFor further details take a look at the property definition: {@link #inlineExternalScripts}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Boolean",
+            "desc": "Returns the value for inlineExternalScripts"
+          }
+        ]
+      }
+    },
+    "isInlineExternalScripts": {
+      "type": "function",
+      "name": "isInlineExternalScripts",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "is",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Gets the (computed) value of the property <code>inlineExternalScripts</code>.\n\nFor further details take a look at the property definition: {@link #inlineExternalScripts}."
+          }
+        ],
+        "@return": [
+          {
+            "name": "@return",
+            "type": "Boolean",
+            "desc": "Returns the value for inlineExternalScripts"
+          }
+        ]
+      }
+    },
+    "setInlineExternalScripts": {
+      "type": "function",
+      "name": "setInlineExternalScripts",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "set",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Sets the user value of the property <code>inlineExternalScripts</code>.\n\nFor further details take a look at the property definition: {@link #inlineExternalScripts}."
+          }
+        ],
+        "@param": [
+          {
+            "name": "@param",
+            "type": "Boolean",
+            "paramName": "value",
+            "desc": "Value for inlineExternalScripts"
+          }
+        ]
+      }
+    },
+    "resetInlineExternalScripts": {
+      "type": "function",
+      "name": "resetInlineExternalScripts",
+      "abstract": false,
+      "mixin": false,
+      "inherited": false,
+      "access": "public",
+      "property": "reset",
+      "jsdoc": {
+        "@description": [
+          {
+            "name": "@description",
+            "body": "Resets the user value of the property <code>inlineExternalScripts</code>.\n\nThe computed value falls back to the next available value e.g. appearance, init or inheritance value depending on the property configuration and value availability.\n\nFor further details take a look at the property definition: {@link #inlineExternalScripts}."
           }
         ]
       }

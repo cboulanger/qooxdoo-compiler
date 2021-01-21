@@ -13,7 +13,7 @@
         "column": 0
       },
       "end": {
-        "line": 458,
+        "line": 456,
         "column": 3
       }
     },
@@ -30,7 +30,7 @@
   "construct": {
     "location": {
       "start": {
-        "line": 42,
+        "line": 41,
         "column": 13
       },
       "end": {
@@ -48,11 +48,7 @@
       "@param": [
         {
           "name": "@param",
-          "body": "dbFilename\n          {String?} database filename, default is \"resource-db.json\"",
-          "paramName": "dbFilename",
-          "description": " database filename, default is \"resource-db.json\"",
-          "optional": true,
-          "type": "String"
+          "body": "analyser {qx.tool.compiler.Analyser}"
         }
       ]
     }
@@ -367,11 +363,11 @@
     "findAllResources": {
       "location": {
         "start": {
-          "line": 221,
+          "line": 219,
           "column": 4
         },
         "end": {
-          "line": 311,
+          "line": 309,
           "column": 5
         }
       },
@@ -381,14 +377,6 @@
             "name": "@description",
             "body": "<p>Scans all libraries looking for resources; this does not analyse the\n files, simply compiles the list</p>"
           }
-        ],
-        "@param": [
-          {
-            "name": "@param",
-            "body": "callback",
-            "paramName": "callback",
-            "type": ""
-          }
         ]
       },
       "type": "function",
@@ -397,11 +385,11 @@
     "__addAsset": {
       "location": {
         "start": {
-          "line": 318,
+          "line": 316,
           "column": 4
         },
         "end": {
-          "line": 345,
+          "line": 343,
           "column": 5
         }
       },
@@ -428,11 +416,11 @@
     "getAsset": {
       "location": {
         "start": {
-          "line": 354,
+          "line": 352,
           "column": 4
         },
         "end": {
-          "line": 372,
+          "line": 370,
           "column": 5
         }
       },
@@ -475,11 +463,11 @@
     "getAssetsForPaths": {
       "location": {
         "start": {
-          "line": 380,
+          "line": 378,
           "column": 4
         },
         "end": {
-          "line": 456,
+          "line": 454,
           "column": 5
         }
       },

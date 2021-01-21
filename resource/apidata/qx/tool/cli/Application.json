@@ -13,16 +13,12 @@
         "column": 0
       },
       "end": {
-        "line": 39,
+        "line": 44,
         "column": 3
       }
     },
     "jsdoc": {
       "@description": [
-        {
-          "name": "@description",
-          "body": "<pre><code>*****************************************************************\n</code></pre>\n<p>qooxdoo - the new era of web development\n   http://qooxdoo.org\n   Copyright:\n     2020 Henner Kollmann\n   License:\n     MIT: https://opensource.org/licenses/MIT\n     See the LICENSE file in the project's top-level directory for details.\n   Authors:\n Henner Kollmann (Henner.Kollmann<code>gmx.de, </code>hkollmann)\n    <strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong><strong><em></em></em></strong><strong><em><em></em></strong></em>*</p>"
-        },
         {
           "name": "@description",
           "body": "<p>This is the main application class of the compiler.</p>"
@@ -42,11 +38,11 @@
       "location": {
         "start": {
           "line": 32,
-          "column": 6
+          "column": 4
         },
         "end": {
-          "line": 34,
-          "column": 7
+          "line": 39,
+          "column": 5
         }
       },
       "jsdoc": {
@@ -3341,11 +3337,11 @@
   "defer": {
     "location": {
       "start": {
-        "line": 36,
+        "line": 41,
         "column": 9
       },
       "end": {
-        "line": 38,
+        "line": 43,
         "column": 3
       }
     },

@@ -13,7 +13,7 @@
         "column": 0
       },
       "end": {
-        "line": 426,
+        "line": 482,
         "column": 3
       }
     },
@@ -34,7 +34,7 @@
         "column": 13
       },
       "end": {
-        "line": 41,
+        "line": 42,
         "column": 3
       }
     },
@@ -44,11 +44,11 @@
     "namespace": {
       "location": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 47,
+          "line": 48,
           "column": 5
         }
       },
@@ -67,11 +67,11 @@
     "version": {
       "location": {
         "start": {
-          "line": 50,
+          "line": 51,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 5
         }
       },
@@ -90,11 +90,11 @@
     "rootDir": {
       "location": {
         "start": {
-          "line": 55,
+          "line": 56,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 59,
           "column": 5
         }
       },
@@ -108,16 +108,17 @@
       },
       "name": "rootDir",
       "propertyType": "new",
+      "transform": "_transformRootDir",
       "check": "String"
     },
     "sourcePath": {
       "location": {
         "start": {
-          "line": 61,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 64,
+          "line": 65,
           "column": 5
         }
       },
@@ -138,11 +139,11 @@
     "transpiledPath": {
       "location": {
         "start": {
-          "line": 67,
+          "line": 68,
           "column": 4
         },
         "end": {
-          "line": 70,
+          "line": 71,
           "column": 5
         }
       },
@@ -163,11 +164,11 @@
     "libraryInfo": {
       "location": {
         "start": {
-          "line": 73,
+          "line": 74,
           "column": 4
         },
         "end": {
-          "line": 75,
+          "line": 76,
           "column": 5
         }
       },
@@ -186,11 +187,11 @@
     "resourcePath": {
       "location": {
         "start": {
-          "line": 78,
+          "line": 79,
           "column": 4
         },
         "end": {
-          "line": 81,
+          "line": 82,
           "column": 5
         }
       },
@@ -211,11 +212,11 @@
     "themePath": {
       "location": {
         "start": {
-          "line": 84,
+          "line": 85,
           "column": 4
         },
         "end": {
-          "line": 87,
+          "line": 88,
           "column": 5
         }
       },
@@ -236,11 +237,11 @@
     "translationPath": {
       "location": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 4
         },
         "end": {
-          "line": 93,
+          "line": 94,
           "column": 5
         }
       },
@@ -261,11 +262,11 @@
     "webFonts": {
       "location": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 4
         },
         "end": {
-          "line": 100,
+          "line": 101,
           "column": 5
         }
       },
@@ -286,11 +287,11 @@
     "addScript": {
       "location": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 4
         },
         "end": {
-          "line": 105,
+          "line": 106,
           "column": 5
         }
       },
@@ -308,11 +309,11 @@
     "addCss": {
       "location": {
         "start": {
-          "line": 108,
+          "line": 109,
           "column": 4
         },
         "end": {
-          "line": 110,
+          "line": 111,
           "column": 5
         }
       },
@@ -330,11 +331,11 @@
     "requires": {
       "location": {
         "start": {
-          "line": 113,
+          "line": 114,
           "column": 4
         },
         "end": {
-          "line": 115,
+          "line": 116,
           "column": 5
         }
       },
@@ -386,11 +387,11 @@
     "__knownSymbols": {
       "location": {
         "start": {
-          "line": 120,
+          "line": 121,
           "column": 4
         },
         "end": {
-          "line": 120,
+          "line": 121,
           "column": 24
         }
       },
@@ -400,11 +401,11 @@
     "__sourceFileExtensions": {
       "location": {
         "start": {
-          "line": 121,
+          "line": 122,
           "column": 4
         },
         "end": {
-          "line": 121,
+          "line": 122,
           "column": 32
         }
       },
@@ -414,12 +415,26 @@
     "__promiseLoadManifest": {
       "location": {
         "start": {
-          "line": 122,
+          "line": 123,
           "column": 4
         },
         "end": {
-          "line": 122,
+          "line": 123,
           "column": 31
+        }
+      },
+      "type": "variable",
+      "access": "private"
+    },
+    "__environmentChecks": {
+      "location": {
+        "start": {
+          "line": 124,
+          "column": 4
+        },
+        "end": {
+          "line": 124,
+          "column": 29
         }
       },
       "type": "variable",
@@ -428,11 +443,11 @@
     "_transformRootDir": {
       "location": {
         "start": {
-          "line": 130,
+          "line": 132,
           "column": 4
         },
         "end": {
-          "line": 134,
+          "line": 136,
           "column": 5
         }
       },
@@ -472,11 +487,11 @@
     "loadManifest": {
       "location": {
         "start": {
-          "line": 142,
+          "line": 143,
           "column": 4
         },
         "end": {
-          "line": 147,
+          "line": 148,
           "column": 5
         }
       },
@@ -490,15 +505,10 @@
         "@param": [
           {
             "name": "@param",
-            "body": "rootDir",
-            "paramName": "rootDir",
-            "type": ""
-          },
-          {
-            "name": "@param",
-            "body": "cb",
-            "paramName": "cb",
-            "type": ""
+            "body": "loadFromDir {String} directory",
+            "paramName": "loadFromDir",
+            "description": " directory",
+            "type": "String"
           }
         ]
       },
@@ -508,11 +518,11 @@
     "__loadManifestImpl": {
       "location": {
         "start": {
-          "line": 149,
+          "line": 150,
           "column": 4
         },
         "end": {
-          "line": 225,
+          "line": 244,
           "column": 5
         }
       },
@@ -522,11 +532,11 @@
     "scanForClasses": {
       "location": {
         "start": {
-          "line": 233,
+          "line": 252,
           "column": 4
         },
         "end": {
-          "line": 319,
+          "line": 338,
           "column": 5
         }
       },
@@ -540,7 +550,10 @@
         "@param": [
           {
             "name": "@param",
-            "body": "cb(err, classes) returns an array of class names"
+            "body": "cb {Function} (err, classes) returns an array of class names",
+            "paramName": "cb",
+            "description": " (err, classes) returns an array of class names",
+            "type": "Function"
           }
         ]
       },
@@ -550,11 +563,11 @@
     "getSymbolType": {
       "location": {
         "start": {
-          "line": 326,
+          "line": 346,
           "column": 4
         },
         "end": {
-          "line": 352,
+          "line": 408,
           "column": 5
         }
       },
@@ -562,7 +575,7 @@
         "@description": [
           {
             "name": "@description",
-            "body": "<p>Detects the type of a symbol, \"class\", \"resource\", \"package\", or null if not found</p>"
+            "body": "<p>Detects the type of a symbol, \"class\", \"resource\", \"package\", \"environment\", or null if not found</p>"
           }
         ],
         "@param": [
@@ -574,9 +587,9 @@
         "@return": [
           {
             "name": "@return",
-            "body": "{{symbolType,name,className?}}",
-            "type": "{symbolType,name,className?",
-            "description": "}"
+            "body": "{{symbolType,name,className}?}",
+            "type": "{symbolType,name,className",
+            "description": "?}"
           }
         ]
       },
@@ -586,11 +599,11 @@
     "isClass": {
       "location": {
         "start": {
-          "line": 360,
+          "line": 416,
           "column": 4
         },
         "end": {
-          "line": 363,
+          "line": 419,
           "column": 5
         }
       },
@@ -625,11 +638,11 @@
     "getKnownSymbols": {
       "location": {
         "start": {
-          "line": 368,
+          "line": 424,
           "column": 4
         },
         "end": {
-          "line": 370,
+          "line": 426,
           "column": 5
         }
       },
@@ -647,11 +660,11 @@
     "getSourceFileExtension": {
       "location": {
         "start": {
-          "line": 378,
+          "line": 434,
           "column": 4
         },
         "end": {
-          "line": 380,
+          "line": 436,
           "column": 5
         }
       },
@@ -675,11 +688,11 @@
     "getFilename": {
       "location": {
         "start": {
-          "line": 388,
+          "line": 444,
           "column": 4
         },
         "end": {
-          "line": 390,
+          "line": 446,
           "column": 5
         }
       },
@@ -714,11 +727,11 @@
     "getResourceFilename": {
       "location": {
         "start": {
-          "line": 398,
+          "line": 454,
           "column": 4
         },
         "end": {
-          "line": 400,
+          "line": 456,
           "column": 5
         }
       },
@@ -753,11 +766,11 @@
     "getThemeFilename": {
       "location": {
         "start": {
-          "line": 408,
+          "line": 464,
           "column": 4
         },
         "end": {
-          "line": 410,
+          "line": 466,
           "column": 5
         }
       },
@@ -4924,11 +4937,11 @@
     "createLibrary": {
       "location": {
         "start": {
-          "line": 420,
+          "line": 476,
           "column": 4
         },
         "end": {
-          "line": 424,
+          "line": 480,
           "column": 5
         }
       },

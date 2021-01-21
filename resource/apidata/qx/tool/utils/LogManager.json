@@ -9,11 +9,11 @@
   "clazz": {
     "location": {
       "start": {
-        "line": 56,
+        "line": 60,
         "column": 0
       },
       "end": {
-        "line": 182,
+        "line": 186,
         "column": 3
       }
     }
@@ -22,11 +22,11 @@
   "construct": {
     "location": {
       "start": {
-        "line": 59,
+        "line": 63,
         "column": 13
       },
       "end": {
-        "line": 72,
+        "line": 76,
         "column": 3
       }
     },
@@ -36,11 +36,11 @@
     "__instance": {
       "location": {
         "start": {
-          "line": 75,
+          "line": 79,
           "column": 4
         },
         "end": {
-          "line": 75,
+          "line": 79,
           "column": 20
         }
       },
@@ -50,11 +50,11 @@
     "createLog": {
       "location": {
         "start": {
-          "line": 82,
+          "line": 86,
           "column": 4
         },
         "end": {
-          "line": 87,
+          "line": 91,
           "column": 5
         }
       },
@@ -78,11 +78,11 @@
     "getInstance": {
       "location": {
         "start": {
-          "line": 93,
+          "line": 97,
           "column": 4
         },
         "end": {
-          "line": 98,
+          "line": 102,
           "column": 5
         }
       },
@@ -108,11 +108,11 @@
     "nullSink": {
       "location": {
         "start": {
-          "line": 100,
+          "line": 104,
           "column": 4
         },
         "end": {
-          "line": 102,
+          "line": 106,
           "column": 5
         }
       },
@@ -122,11 +122,11 @@
     "consoleSink": {
       "location": {
         "start": {
-          "line": 104,
+          "line": 108,
           "column": 4
         },
         "end": {
-          "line": 109,
+          "line": 113,
           "column": 5
         }
       },
@@ -138,11 +138,11 @@
     "loadConfig": {
       "location": {
         "start": {
-          "line": 113,
+          "line": 117,
           "column": 4
         },
         "end": {
-          "line": 125,
+          "line": 129,
           "column": 5
         }
       },
@@ -152,11 +152,11 @@
     "getLogger": {
       "location": {
         "start": {
-          "line": 127,
+          "line": 131,
           "column": 4
         },
         "end": {
-          "line": 133,
+          "line": 137,
           "column": 5
         }
       },
@@ -166,21 +166,7 @@
     "getLoggerLevel": {
       "location": {
         "start": {
-          "line": 135,
-          "column": 4
-        },
-        "end": {
-          "line": 148,
-          "column": 5
-        }
-      },
-      "type": "function",
-      "access": "public"
-    },
-    "addSink": {
-      "location": {
-        "start": {
-          "line": 150,
+          "line": 139,
           "column": 4
         },
         "end": {
@@ -191,14 +177,28 @@
       "type": "function",
       "access": "public"
     },
-    "removeSink": {
+    "addSink": {
       "location": {
         "start": {
           "line": 154,
           "column": 4
         },
         "end": {
-          "line": 159,
+          "line": 156,
+          "column": 5
+        }
+      },
+      "type": "function",
+      "access": "public"
+    },
+    "removeSink": {
+      "location": {
+        "start": {
+          "line": 158,
+          "column": 4
+        },
+        "end": {
+          "line": 163,
           "column": 5
         }
       },
@@ -208,11 +208,11 @@
     "output": {
       "location": {
         "start": {
-          "line": 161,
+          "line": 165,
           "column": 4
         },
         "end": {
-          "line": 168,
+          "line": 172,
           "column": 5
         }
       },
@@ -222,11 +222,11 @@
     "setDefaultSink": {
       "location": {
         "start": {
-          "line": 170,
+          "line": 174,
           "column": 4
         },
         "end": {
-          "line": 180,
+          "line": 184,
           "column": 5
         }
       },
